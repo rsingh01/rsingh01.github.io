@@ -137,6 +137,19 @@ a:hover { color: var(--accent-light); }
   z-index: 2;
 }
 
+.hero-headshot {
+  margin-bottom: 24px;
+}
+
+.hero-headshot img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 24px rgba(196, 154, 108, 0.2);
+}
+
 .hero-greeting {
   font-family: var(--font-mono);
   font-size: 0.9rem;

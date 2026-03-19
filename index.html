@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -31,12 +32,15 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-content">
+      <div class="hero-headshot">
+        <img src="https://assets.rajsec.dev/img/rs-headshot.jpg" alt="Raj Singh" />
+      </div>
       <p class="hero-greeting">namaste, I'm</p>
       <h1 class="hero-name">Raj Singh</h1>
       <div class="hero-title-wrapper">
-        <span class="hero-title">Enterprise Security Engineer</span>
+        <span class="hero-title"><i class="fa-solid fa-shield-halved"></i> Enterprise Security Engineer</span>
         <span class="hero-divider">&mdash;</span>
-        <span class="hero-company">Hudson River Trading</span>
+        <a href="https://www.hudsonrivertrading.com" target="_blank" rel="noopener" class="hero-company"><i class="fa-solid fa-chart-line"></i> Hudson River Trading</a>
       </div>
       <p class="hero-tagline">Building secure systems at the intersection of finance and technology.</p>
       <div class="hero-cta">
@@ -50,7 +54,7 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title"><i class="fa-solid fa-user"></i> About Me</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>I'm a security engineer with a passion for building and defending complex systems at scale. Currently at <strong>Hudson River Trading</strong>, I focus on enterprise security — protecting the infrastructure that powers one of the world's most sophisticated trading firms.</p>
@@ -82,7 +86,7 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
       <div class="timeline">
 
         <div class="timeline-item">
@@ -95,6 +99,9 @@
               </div>
               <span class="timeline-date">Present</span>
             </div>
+            <ul>
+              <li>Mysterious and important security work within enterprise technology.</li>
+            </ul>
           </div>
         </div>
 
@@ -160,10 +167,10 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <h2 class="section-title">Skills &amp; Expertise</h2>
+      <h2 class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> Skills &amp; Expertise</h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>Cloud Security</h3>
+          <h3><i class="fa-solid fa-cloud-bolt"></i> Cloud Security</h3>
           <div class="skill-tags">
             <span>AWS IAM</span><span>S3</span><span>VPC</span><span>KMS</span>
             <span>Organizations / SCP</span><span>Lambda</span><span>GuardDuty</span>
@@ -172,7 +179,7 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>Security Practice</h3>
+          <h3><i class="fa-solid fa-lock"></i> Security Practice</h3>
           <div class="skill-tags">
             <span>Threat Modelling</span><span>MITRE ATT&amp;CK</span><span>STRIDE</span>
             <span>NIST RMF / CSF</span><span>OCTAVE FORTE</span><span>FAIR</span>
@@ -181,7 +188,7 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>Engineering</h3>
+          <h3><i class="fa-solid fa-code"></i> Engineering</h3>
           <div class="skill-tags">
             <span>Python</span><span>Terraform / HCL</span><span>AWS CDK</span>
             <span>TypeScript</span><span>C</span><span>Java</span><span>SQL</span>
@@ -189,7 +196,7 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>Tools</h3>
+          <h3><i class="fa-solid fa-terminal"></i> Tools</h3>
           <div class="skill-tags">
             <span>Metasploit</span><span>Wireshark</span><span>nmap</span>
             <span>Nessus</span><span>tcpdump</span><span>ELK Stack</span>
@@ -203,28 +210,28 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-icon">&#x2731;</div>
+          <div class="project-icon"><i class="fa-solid fa-satellite-dish"></i></div>
           <h3>US Army NETCOM Capstone</h3>
           <p>Automated pipeline for ingesting, analyzing, and visualizing threat intelligence data from Symantec. Built with Python, Redis, and graph-based analysis.</p>
           <span class="project-tag">CMU &middot; 2020</span>
         </div>
         <div class="project-card">
-          <div class="project-icon">&#x276F;</div>
+          <div class="project-icon"><i class="fa-solid fa-bug"></i></div>
           <h3>SSH Honeypot</h3>
           <p>Deployed a publicly visible SSH honeypot on Raspberry Pi. Analyzed packet data and system logs to profile attack vectors and attacker demographics.</p>
           <span class="project-tag">Research &middot; 2020</span>
         </div>
         <div class="project-card">
-          <div class="project-icon">&#x2694;</div>
+          <div class="project-icon"><i class="fa-solid fa-chess-knight"></i></div>
           <h3>Cyber 9/12 Strategy Challenge</h3>
           <p>Represented Carnegie Mellon in a national cyber policy strategy challenge. Wrote policy briefs and delivered presentations in crisis simulations.</p>
           <span class="project-tag">Competition &middot; 2019</span>
         </div>
         <div class="project-card">
-          <div class="project-icon">&#x270E;</div>
+          <div class="project-icon"><i class="fa-solid fa-scroll"></i></div>
           <h3>Academic Papers</h3>
           <p>Co-authored analysis of First American's data leak (OCTAVE Forte / NIST 800-53). Authored comparative study of NIST RMF and FAIR frameworks.</p>
           <span class="project-tag">Research &middot; 2019</span>
@@ -236,16 +243,16 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Let's Connect</h2>
+      <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> Let's Connect</h2>
       <p class="contact-text">Whether you want to talk security, collaborate on a project, or just say hello — I'd love to hear from you.</p>
       <div class="contact-links">
         <a href="mailto:nova.magus@gmail.com" class="contact-card">
-          <span class="contact-icon">&#x2709;</span>
+          <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
           <span class="contact-label">Email</span>
           <span class="contact-value">nova.magus@gmail.com</span>
         </a>
         <a href="https://www.linkedin.com/in/rgsingh01" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-icon">in</span>
+          <span class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></span>
           <span class="contact-label">LinkedIn</span>
           <span class="contact-value">rgsingh01</span>
         </a>
