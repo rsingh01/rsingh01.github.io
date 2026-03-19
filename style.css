@@ -522,6 +522,15 @@ section { padding: 80px 0; }
 /* ---- RESUME ---- */
 #resume { background: var(--bg-primary); }
 
+.section-title a {
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.section-title a:hover {
+  color: var(--accent);
+}
+
 .resume-pages {
   display: grid;
   grid-template-columns: 1fr 1fr;
