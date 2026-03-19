@@ -519,6 +519,36 @@ section { padding: 80px 0; }
   letter-spacing: 0.1em;
 }
 
+/* ---- RESUME ---- */
+#resume { background: var(--bg-primary); }
+
+.resume-pages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.resume-page {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-page:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.resume-page canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ---- CONTACT ---- */
 #contact {
   background: var(--bg-primary);
@@ -637,6 +667,8 @@ footer p {
   .hero-divider { display: none; }
 
   .timeline-header { flex-direction: column; gap: 4px; }
+
+  .resume-pages { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
 }
 
 @media (max-width: 480px) {

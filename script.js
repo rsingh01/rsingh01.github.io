@@ -55,6 +55,35 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ---- Render resume PDF ----
+(async () => {
+  if (typeof pdfjsLib === 'undefined') return;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  try {
+    const pdf = await pdfjsLib.getDocument('https://assets.rajsec.dev/img/rsingh_resume_2026_final.pdf').promise;
+    const container = document.getElementById('resume-pages');
+    const scale = window.devicePixelRatio || 2;
+
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const viewport = page.getViewport({ scale: scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'resume-page';
+      wrapper.appendChild(canvas);
+      container.appendChild(wrapper);
+
+      await page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport }).promise;
+    }
+  } catch (e) {
+    console.error('Resume PDF failed to load:', e);
+  }
+})();
+
 // ---- Navbar background on scroll ----
 const navbar = document.getElementById('navbar');
 
