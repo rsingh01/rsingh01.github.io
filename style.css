@@ -543,7 +543,7 @@ section { padding: 80px 0; }
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
-.resume-page canvas {
+.resume-page img {
   display: block;
   width: 100%;
   height: auto;
