@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Singh — Security Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">RS</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">namaste, I'm</p>
+      <h1 class="hero-name">Raj Singh</h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-title">Enterprise Security Engineer</span>
+        <span class="hero-divider">&mdash;</span>
+        <span class="hero-company">Hudson River Trading</span>
+      </div>
+      <p class="hero-tagline">Building secure systems at the intersection of finance and technology.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn btn-outline">View My Work</a>
+      </div>
+    </div>
+    <div class="hero-pattern" aria-hidden="true"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a security engineer with a passion for building and defending complex systems at scale. Currently at <strong>Hudson River Trading</strong>, I focus on enterprise security — protecting the infrastructure that powers one of the world's most sophisticated trading firms.</p>
+          <p>My journey spans cloud security across AWS and GCP, threat modelling, architecture review, and building security tooling from the ground up. I've embedded security into products at <strong>AWS</strong>, architected secure cloud platforms at <strong>Goldman Sachs</strong>, and built detection and remediation frameworks at <strong>Millennium Management</strong>.</p>
+          <p>I hold a Master's in Information Security from <strong>Carnegie Mellon University</strong> and a BS in Computer Science from <strong>New Mexico Tech</strong>. When I'm not hardening systems, you'll find me mentoring engineers, writing about security, and exploring the ever-evolving threat landscape.</p>
+        </div>
+        <div class="about-details">
+          <div class="detail-card">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">New York, NY</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Education</span>
+            <span class="detail-value">Carnegie Mellon (MS) &middot; NM Tech (BS)</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Focus</span>
+            <span class="detail-value">Enterprise &amp; Cloud Security</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Languages</span>
+            <span class="detail-value">English &middot; Hindi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Hudson River Trading</h3>
+                <span class="timeline-role">Enterprise Security Engineer</span>
+              </div>
+              <span class="timeline-date">Present</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Amazon Web Services</h3>
+                <span class="timeline-role">Security Engineer</span>
+              </div>
+              <span class="timeline-date">2023 &ndash; 2024</span>
+            </div>
+            <ul>
+              <li>Trusted security voice delivering end-to-end security reviews for 7 AWS services across industry segments.</li>
+              <li>Led design review, threat modelling, architecture review, code review, and pentest finding mitigation at scale.</li>
+              <li>Created golden-path documents solving ambiguous security problems; mentored engineers across teams.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Goldman Sachs</h3>
+                <span class="timeline-role">Security Architect (Associate)</span>
+              </div>
+              <span class="timeline-date">2022 &ndash; 2023</span>
+            </div>
+            <ul>
+              <li>Security advisor for the firm's fully managed continuous delivery service for AWS infrastructure.</li>
+              <li>Wrote 100+ CDK test cases validating platform security guardrails; performed threat modelling at scale.</li>
+              <li>Performed architecture reviews for production workloads across the firm (AWS native and hybrid).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Millennium Management</h3>
+                <span class="timeline-role">Cloud Security Engineer</span>
+              </div>
+              <span class="timeline-date">2020 &ndash; 2022</span>
+            </div>
+            <ul>
+              <li>Enabled AWS services across 100s of accounts — security evaluation, SCP management, CI/CD policy deployment.</li>
+              <li>Code owner of the org's AWS detection/notification/remediation framework (Python).</li>
+              <li>Implemented 50+ GCP security controls via Terraform; managed Hashicorp Vault platform.</li>
+              <li>Deployed CSPM tooling, coordinated penetration tests, and cross-trained security teams.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Cloud Security</h3>
+          <div class="skill-tags">
+            <span>AWS IAM</span><span>S3</span><span>VPC</span><span>KMS</span>
+            <span>Organizations / SCP</span><span>Lambda</span><span>GuardDuty</span>
+            <span>Security Hub</span><span>GCP Org Policies</span>
+            <span>VPC Service Controls</span><span>Cloud Logging</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Security Practice</h3>
+          <div class="skill-tags">
+            <span>Threat Modelling</span><span>MITRE ATT&amp;CK</span><span>STRIDE</span>
+            <span>NIST RMF / CSF</span><span>OCTAVE FORTE</span><span>FAIR</span>
+            <span>Architecture Review</span><span>Penetration Testing</span>
+            <span>Incident Response</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Engineering</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>Terraform / HCL</span><span>AWS CDK</span>
+            <span>TypeScript</span><span>C</span><span>Java</span><span>SQL</span>
+            <span>Git</span><span>Linux</span><span>Hashicorp Vault</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools</h3>
+          <div class="skill-tags">
+            <span>Metasploit</span><span>Wireshark</span><span>nmap</span>
+            <span>Nessus</span><span>tcpdump</span><span>ELK Stack</span>
+            <span>Redis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">&#x2731;</div>
+          <h3>US Army NETCOM Capstone</h3>
+          <p>Automated pipeline for ingesting, analyzing, and visualizing threat intelligence data from Symantec. Built with Python, Redis, and graph-based analysis.</p>
+          <span class="project-tag">CMU &middot; 2020</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">&#x276F;</div>
+          <h3>SSH Honeypot</h3>
+          <p>Deployed a publicly visible SSH honeypot on Raspberry Pi. Analyzed packet data and system logs to profile attack vectors and attacker demographics.</p>
+          <span class="project-tag">Research &middot; 2020</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">&#x2694;</div>
+          <h3>Cyber 9/12 Strategy Challenge</h3>
+          <p>Represented Carnegie Mellon in a national cyber policy strategy challenge. Wrote policy briefs and delivered presentations in crisis simulations.</p>
+          <span class="project-tag">Competition &middot; 2019</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">&#x270E;</div>
+          <h3>Academic Papers</h3>
+          <p>Co-authored analysis of First American's data leak (OCTAVE Forte / NIST 800-53). Authored comparative study of NIST RMF and FAIR frameworks.</p>
+          <span class="project-tag">Research &middot; 2019</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-text">Whether you want to talk security, collaborate on a project, or just say hello — I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:nova.magus@gmail.com" class="contact-card">
+          <span class="contact-icon">&#x2709;</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">nova.magus@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/rgsingh01" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">in</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">rgsingh01</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Raj Singh. Built with intention.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
