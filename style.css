@@ -632,16 +632,72 @@ footer p {
   font-family: var(--font-mono);
 }
 
-/* ---- FADE IN ANIMATION ---- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* ---- GRAIN OVERLAY ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ---- SCROLL ANIMATIONS ---- */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-scale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Base hidden state for all animated elements */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+.reveal-up.visible    { animation-name: reveal-up; }
+.reveal-left.visible  { animation-name: reveal-left; }
+.reveal-right.visible { animation-name: reveal-right; }
+.reveal-scale.visible { animation-name: reveal-scale; }
+
+/* Stagger children */
+.reveal.visible.stagger-1 { animation-delay: 0s; }
+.reveal.visible.stagger-2 { animation-delay: 0.1s; }
+.reveal.visible.stagger-3 { animation-delay: 0.2s; }
+.reveal.visible.stagger-4 { animation-delay: 0.3s; }
+.reveal.visible.stagger-5 { animation-delay: 0.4s; }
+.reveal.visible.stagger-6 { animation-delay: 0.5s; }
+
+/* Section titles — accent line grows on reveal */
+.section-title::after {
+  width: 0;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.section-title.visible::after {
+  width: 48px;
 }
 
 /* ---- RESPONSIVE ---- */
