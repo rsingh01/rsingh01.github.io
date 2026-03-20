@@ -92,6 +92,23 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ---- Ambient glow on scroll ----
+const glowObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('glow-active', entry.isIntersecting);
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('#about, #experience, #skills, #projects, #resume, #contact').forEach(el => {
+  glowObserver.observe(el);
+});
+
+// ---- Divider fade-in ----
+document.querySelectorAll('.section-divider').forEach(el => {
+  el.classList.add('reveal', 'reveal-scale');
+  revealObserver.observe(el);
+});
+
 // ---- Navbar background on scroll ----
 const navbar = document.getElementById('navbar');
 
