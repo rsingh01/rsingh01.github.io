@@ -101,6 +101,12 @@ a:hover { color: var(--accent-light); }
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.02em;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-logo:hover {
+  transform: rotate(360deg);
 }
 
 .nav-links { display: flex; gap: 28px; }
@@ -159,7 +165,6 @@ a:hover { color: var(--accent-light); }
 
 .hero-headshot,
 .hero-greeting,
-.hero-name,
 .hero-title-wrapper,
 .hero-tagline,
 .hero-cta {
@@ -169,10 +174,9 @@ a:hover { color: var(--accent-light); }
 
 .hero-headshot      { animation-delay: 0.1s; }
 .hero-greeting      { animation-delay: 0.3s; }
-.hero-name          { animation-delay: 0.5s; }
-.hero-title-wrapper { animation-delay: 0.7s; }
-.hero-tagline       { animation-delay: 0.9s; }
-.hero-cta           { animation-delay: 1.1s; }
+.hero-title-wrapper { animation-delay: 1.4s; }
+.hero-tagline       { animation-delay: 1.6s; }
+.hero-cta           { animation-delay: 1.8s; }
 
 .hero-headshot {
   margin-bottom: 24px;
@@ -191,9 +195,28 @@ a:hover { color: var(--accent-light); }
   font-family: var(--font-mono);
   font-size: 0.9rem;
   color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: lowercase;
+  letter-spacing: 0.06em;
+  text-transform: none;
   margin-bottom: 12px;
+}
+
+.hero-prompt {
+  color: var(--text-muted);
+}
+
+.hero-typed {
+  border-right: 2px solid var(--accent);
+  padding-right: 2px;
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+.hero-typed.done {
+  border-right-color: transparent;
+  animation: none;
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
 }
 
 .hero-name {
@@ -708,6 +731,16 @@ footer p {
   font-family: var(--font-mono);
 }
 
+.footer-hint {
+  opacity: 0.3;
+  cursor: default;
+  transition: opacity 0.3s;
+}
+
+.footer-hint:hover {
+  opacity: 0.7;
+}
+
 /* ---- GRAIN OVERLAY ---- */
 body::before {
   content: '';
@@ -776,6 +809,129 @@ body::before {
   width: 48px;
 }
 
+/* ---- CURSOR GLOW ---- */
+#cursor-glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 154, 108, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body:hover #cursor-glow { opacity: 1; }
+
+/* ---- HERO PARTICLES ---- */
+#hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---- 3D CARD TILT ---- */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.tilt-card .tilt-inner {
+  transition: transform 0.15s ease-out;
+}
+
+/* ---- TIMELINE DRAW ---- */
+.timeline::before {
+  background: linear-gradient(to bottom, var(--accent), var(--border)) !important;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline.draw-active::before {
+  transform: scaleY(1);
+}
+
+.timeline-marker {
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.timeline-item.visible .timeline-marker {
+  background: var(--accent) !important;
+  box-shadow: 0 0 12px rgba(196, 154, 108, 0.4);
+  transform: scale(1.15);
+}
+
+/* ---- KONAMI EASTER EGG ---- */
+#konami-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 11, 8, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#konami-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.konami-terminal {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  max-width: 600px;
+  padding: 40px;
+}
+
+.konami-prompt {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.konami-typed {
+  border-right: 2px solid var(--accent);
+  padding-right: 4px;
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.konami-output {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  opacity: 0;
+}
+
+#konami-overlay.active .konami-output {
+  animation: hero-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#konami-overlay.active .konami-output:nth-child(2) { animation-delay: 1.5s; }
+#konami-overlay.active .konami-output:nth-child(3) { animation-delay: 2s; }
+
+.konami-close {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  opacity: 0;
+}
+
+#konami-overlay.active .konami-close {
+  animation: hero-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 2.5s;
+}
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -810,6 +966,8 @@ body::before {
   .timeline-header { flex-direction: column; gap: 4px; }
 
   .resume-pages { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+
+  #cursor-glow { display: none; }
 }
 
 @media (max-width: 480px) {

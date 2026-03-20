@@ -36,7 +36,7 @@
       <div class="hero-headshot">
         <img src="https://assets.rajsec.dev/img/rs-headshot.jpg" alt="Raj Singh" />
       </div>
-      <p class="hero-greeting">namaste, I'm</p>
+      <p class="hero-greeting"><span class="hero-prompt">raj@rajsec:~$</span> <span class="hero-typed"></span></p>
       <h1 class="hero-name">Raj Singh</h1>
       <div class="hero-title-wrapper">
         <span class="hero-title"><i class="fa-solid fa-shield-halved"></i> Enterprise Security Engineer</span>
@@ -49,6 +49,7 @@
         <a href="#experience" class="btn btn-outline">View My Work</a>
       </div>
     </div>
+    <canvas id="hero-particles" aria-hidden="true"></canvas>
     <div class="hero-pattern" aria-hidden="true"></div>
   </section>
 
@@ -336,9 +337,20 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Raj Singh. Built with intention.</p>
+      <p>&copy; 2026 Raj Singh. Built with intention. <span class="footer-hint" title="Try it.">&uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;</span></p>
     </div>
   </footer>
+
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <div id="konami-overlay" aria-hidden="true">
+    <div class="konami-terminal">
+      <p class="konami-prompt">raj@rajsec.dev:~$ <span class="konami-typed"></span></p>
+      <p class="konami-output">Permission denied. Just kidding.</p>
+      <p class="konami-output">You found it. Not many people look this hard.</p>
+      <p class="konami-close">[press any key to exit]</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
