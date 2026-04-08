@@ -260,10 +260,9 @@ a:hover { color: var(--accent-light); }
   margin: 0 auto 36px;
 }
 
-.hero-tagline-sub {
-  font-size: 0.95rem;
-  margin-top: -20px;
-  animation-delay: 1.75s;
+.hero-highlight {
+  color: var(--accent-warm);
+  font-weight: 600;
 }
 
 .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
